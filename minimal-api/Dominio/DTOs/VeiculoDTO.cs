@@ -1,0 +1,9 @@
+﻿namespace minimal_api.Dominio.DTOs
+{
+    public record VeiculoDTO
+    {
+        public string Nome { get; set; }
+        public string Marca { get; set; }
+        public string Ano { get; set; }
+    }
+}
