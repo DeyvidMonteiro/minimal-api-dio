@@ -6,11 +6,15 @@ namespace minimal_api.Infraestrutura.Db
 {
     public class DbContexto : DbContext
     {
-        private readonly IConfiguration _config;
+        private readonly IConfiguration? _config;
 
         public DbContexto(IConfiguration config)
         {
             _config = config;
+        }
+
+        public DbContexto(DbContextOptions<DbContexto> options) : base(options)
+        {
         }
 
         public DbSet<Administrador> Administrador { get; set; }
